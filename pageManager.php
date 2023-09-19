@@ -57,9 +57,11 @@
 	<div class="page-wrapper">
 		<aside class="menu-sidebar2">
 			<div class="logo">
+            <center>
                 <a href="#">
-                    <img src="images/icon/logo-white.png" alt="Cool Admin" />
+                <img src="images/icon/logo_white.png" alt="CoolAdmin" style="height: 55px;">
                 </a>
+            </center>
             </div>
             <div class="menu-sidebar2__content js-scrollbar1">
                 <div class="account2">
@@ -74,28 +76,34 @@
                             <a href="?page">
                             <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
-                        <li>
-                            <a href="?page=kelPegawai">
-                            <i class="fas fa-users"></i>Kelola Pegawai</a>
-                        </li>
-                        <li>
+                        <!-- <li>
                             <a href="?page=kelTransaksi">
                             <i class="fas fa-shopping-basket"></i>Kelola Transaksi</a>
-                        </li>
+                        </li> -->
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                            <i class="fas fa-archive"></i>Data Barang</a>
+                            <i class="fas fa-archive"></i>Laporan</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="?page=kelBarang">Semua Barang</a>
+                                    <a href="?page=kelPertumbuhan">Keseluruhan Pertumbuhan</a>
                                 </li>
                                 <li>
-                                    <a href="?page=periode">Lihat Barang per Periode</a>
+                                    <a href="?page=kelPerkembangan">Keseluruhan Perkembangan</a>
                                 </li>
                                 <li>
+                                    <a href="?page=pertumbuhanperiode">Pertumbuhan Per Periode</a>
+                                </li>
+                                <li>
+                                    <a href="?page=perkembanganperiode">Perkembangan Per Periode</a>
+                                </li>
+                                <!-- <li>
                                     <a href="?page=barangHabis">Barang Habis</a>
-                                </li>
+                                </li> -->
                             </ul>
+                        </li>
+                        <li>
+                            <a href="?page=kelPengguna">
+                            <i class="fas fa-users"></i>Kelola Pengguna</a>
                         </li>
                     </ul>
                 </nav>
@@ -206,29 +214,35 @@
                             	<a href="?page">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         	</li>
-                        	<li>
-	                            <a href="?page=kelPegawai">
-	                            <i class="fas fa-users"></i>Kelola Pegawai</a>
-                        	</li>
-                            <li>
+                        	<!-- <li>
                                 <a href="?page=kelTransaksi">
                                 <i class="fas fa-shopping-basket"></i>Kelola Transaksi</a>
-                            </li>
+                            </li> -->
                             <li class="has-sub">
                                 <a class="js-arrow" href="#">
-                                    <i class="fas fa-tachometer-alt"></i>Data Barang</a>
+                                    <i class="fas fa-tachometer-alt"></i>Laporan</a>
                                 <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                     <li>
-                                        <a href="?page=kelBarang">Semua Barang</a>
+                                        <a href="?page=kelPertumbuhan">Keseluruhan Pertumbuhan</a>
                                     </li>
                                     <li>
-                                        <a href="?page=periode">Lihat Barang per Periode</a>
+                                        <a href="?page=kelPerkembangan">Keseluruhan Perkembangan</a>
                                     </li>
                                     <li>
+                                        <a href="?page=pertumbuhanperiode">Pertumbuhan Per Periode</a>
+                                    </li>
+                                    <li>
+                                        <a href="?page=perkembanganperiode">Perkembangan Per Periode</a>
+                                    </li>
+                                    <!-- <li>
                                         <a href="?page=barangHabis">Barang Habis</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </li>
+                            <li>
+	                            <a href="?page=kelPengguna">
+	                            <i class="fas fa-users"></i>Kelola Pengguna</a>
+                        	</li>
                         </ul>
                     </nav>
                 </div>
@@ -238,20 +252,26 @@
 
 				@$page = $_GET['page'];
 				switch($page){
-					case 'kelPegawai':
-						include "manager/kelolaPegawai.php";
+					case 'kelPengguna':
+						include "manager/kelolaPengguna.php";
 						break;
                     case 'profile':
                         include "profile.php";
                         break;
-                    case 'kelBarang':
-                        include "manager/viewManagerBarang.php";
+                    case 'kelPertumbuhan':
+                        include "manager/viewAllPertumbuhan.php";
+                        break;
+                    case 'kelPerkembangan':
+                        include "manager/viewAllPerkembangan.php";
                         break;
                     case 'viewBarangDetail':
                         include "manager/viewBarangDetail.php";
                         break;
-                    case 'periode':
-                        include "manager/BarangPeriode.php";
+                    case 'pertumbuhanperiode':
+                        include "manager/PertumbuhanPeriode.php";
+                        break;
+                    case 'perkembanganperiode':
+                        include "manager/PerkembanganPeriode.php";
                         break;
                     case 'barangHabis':
                         include "manager/BarangHabis.php";

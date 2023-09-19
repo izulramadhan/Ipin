@@ -110,12 +110,36 @@
             return $data = mysqli_fetch_assoc($query);
         }
 
+        public function selectCountNow($table,$namaField, $tgl){
+            global $con;
+            $sql = "SELECT COUNT($namaField) as count FROM $table WHERE $tgl = CURRENT_DATE";
+            $query = mysqli_query($con,$sql);
+            return $data = mysqli_fetch_assoc($query);
+        }
+
         public function selectBetween($table,$whereparam,$param,$param1){
             global $con;
             $sql = "SELECT * FROM $table WHERE $whereparam BETWEEN '$param' AND '$param1'";
             $query = mysqli_query($con,$sql);
 
-            $sqls = "SELECT SUM(stok_barang) as count FROM $table WHERE $whereparam BETWEEN '$param' AND '$param1'";
+            // $sqls = "SELECT SUM(stok_barang) as count FROM $table WHERE $whereparam BETWEEN '$param' AND '$param1'";
+            $sqls = "SELECT COUNT(hp_id) as count FROM $table WHERE $whereparam BETWEEN '$param' AND '$param1'";
+            $querys = mysqli_query($con,$sqls);
+            $assocs = mysqli_fetch_assoc($querys);
+            $data = [];
+            while($bigData = mysqli_fetch_assoc($query)){
+                $data[] = $bigData;
+            }
+            return ['data'=>$data,'jumlah'=>$assocs];
+        }
+
+        public function selectBetween2($table,$whereparam,$param,$param1){
+            global $con;
+            $sql = "SELECT * FROM $table WHERE $whereparam BETWEEN '$param' AND '$param1'";
+            $query = mysqli_query($con,$sql);
+
+            // $sqls = "SELECT SUM(stok_barang) as count FROM $table WHERE $whereparam BETWEEN '$param' AND '$param1'";
+            $sqls = "SELECT COUNT(perk_id) as count FROM $table WHERE $whereparam BETWEEN '$param' AND '$param1'";
             $querys = mysqli_query($con,$sqls);
             $assocs = mysqli_fetch_assoc($querys);
             $data = [];
@@ -133,7 +157,7 @@
             return $bigData;
         }
 
-        public function register($kd_user,$name,$username,$password,$confirm, $foto, $level,$redirect){
+        public function register($kd_user,$name,$notelp,$alamat,$username,$password,$confirm, $foto, $level,$redirect){
             
             global $con;
             global $rg;
@@ -147,9 +171,9 @@
             
             $rows    = mysqli_num_rows($query);
 
-            if(strlen($username) < 6){
-                return ['response'=>'negative','alert'=>'username minimal 6 Huruf']; 
-            }
+            // if(strlen($username) < 6){
+            //     return ['response'=>'negative','alert'=>'username minimal 6 Huruf']; 
+            // }
             
 
             
@@ -158,13 +182,15 @@
                 $name     = htmlspecialchars($name);
                 
                 $username = strtolower(htmlspecialchars($username));
+                $notelp     = htmlspecialchars($notelp);
+                $alamat     = htmlspecialchars($alamat);
                 $password = htmlspecialchars($password);
                 $confirm  = htmlspecialchars($confirm);
                 
                 if($password == $confirm){
                     $password = base64_encode($password);
                     $response = $rg->validateImage();
-                    $sql = "INSERT INTO table_user VALUES('$kd_user','$name','$username','$password','$response[image]', '$level')";
+                    $sql = "INSERT INTO table_user VALUES('','$kd_user','$name','$username','$password','$response[image]','$level','$notelp','$alamat')";
                     $query   = mysqli_query($con,$sql);
                     if($query){
                         return ['response'=>'positive','alert'=>'Registrasi Berhasil','redirect'=>$redirect];

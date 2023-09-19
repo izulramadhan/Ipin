@@ -420,6 +420,122 @@
         }
     }
 
+    if (isset($_POST['getSave54'])) {
+        $hp_namaanak   = $dis->validateHtml($_POST['nama54']);
+        $hp_umur   = $dis->validateHtml($_POST['umur54']);
+       
+        $kdid = $auth[0]['kd_id'];
+        $username = $auth[0]['nama_user'];
+        $currentDate = date("Y-m-d");
+
+        $perk_1 = $dis->validateHtml($_POST['soal541']);
+        $perk_2 = $dis->validateHtml($_POST['soal542']);
+        $perk_3 = $dis->validateHtml($_POST['soal543']);
+        $perk_4 = $dis->validateHtml($_POST['soal544']);
+        $perk_5 = $dis->validateHtml($_POST['soal545']);
+        $perk_6 = $dis->validateHtml($_POST['soal546']);
+        $perk_7 = $dis->validateHtml($_POST['soal547']);
+        $perk_8 = $dis->validateHtml($_POST['soal548']);
+        $perk_9 = $dis->validateHtml($_POST['soal549']);
+        $perk_10 = $dis->validateHtml($_POST['soal5410']);
+        
+        // if (empty($hp_namaanak) || empty($perk_2) || empty($perk_3) || empty($perk_4) || empty($perk_5) || empty($perk_6) || empty($perk_7) || empty($perk_8) || empty($perk_9) || empty($perk_10) ) {
+        if (empty($hp_namaanak) || empty($hp_umur) ) {
+            $response = ['response'=>'negative','alert'=>'Lengkapi field'];
+        }else{
+        $perk_total = $perk_1+$perk_2+$perk_3+$perk_4+$perk_5+$perk_6+$perk_7+$perk_8+$perk_9+$perk_10;
+                    $value = "'','$kdid','$username','$hp_namaanak','$currentDate',$hp_umur,'$perk_1','$perk_2','$perk_3','$perk_4','$perk_5','$perk_6','$perk_7','$perk_8','$perk_9','$perk_10','$perk_total'";
+                    $response = $dis->insert('table_perkembangan',$value,"?page=viewPerkembangan");
+        }
+    }
+
+    if (isset($_POST['getSave60'])) {
+        $hp_namaanak   = $dis->validateHtml($_POST['nama60']);
+        $hp_umur   = $dis->validateHtml($_POST['umur60']);
+       
+        $kdid = $auth[0]['kd_id'];
+        $username = $auth[0]['nama_user'];
+        $currentDate = date("Y-m-d");
+
+        $perk_1 = $dis->validateHtml($_POST['soal601']);
+        $perk_2 = $dis->validateHtml($_POST['soal602']);
+        $perk_3 = $dis->validateHtml($_POST['soal603']);
+        $perk_4 = $dis->validateHtml($_POST['soal604']);
+        $perk_5 = $dis->validateHtml($_POST['soal605']);
+        $perk_6 = $dis->validateHtml($_POST['soal606']);
+        $perk_7 = $dis->validateHtml($_POST['soal607']);
+        $perk_8 = $dis->validateHtml($_POST['soal608']);
+        $perk_9 = $dis->validateHtml($_POST['soal609']);
+        $perk_10 = $dis->validateHtml($_POST['soal6010']);
+        
+        // if (empty($hp_namaanak) || empty($perk_2) || empty($perk_3) || empty($perk_4) || empty($perk_5) || empty($perk_6) || empty($perk_7) || empty($perk_8) || empty($perk_9) || empty($perk_10) ) {
+        if (empty($hp_namaanak) || empty($hp_umur) ) {
+            $response = ['response'=>'negative','alert'=>'Lengkapi field'];
+        }else{
+        $perk_total = $perk_1+$perk_2+$perk_3+$perk_4+$perk_5+$perk_6+$perk_7+$perk_8+$perk_9+$perk_10;
+                    $value = "'','$kdid','$username','$hp_namaanak','$currentDate',$hp_umur,'$perk_1','$perk_2','$perk_3','$perk_4','$perk_5','$perk_6','$perk_7','$perk_8','$perk_9','$perk_10','$perk_total'";
+                    $response = $dis->insert('table_perkembangan',$value,"?page=viewPerkembangan");
+        }
+    }
+
+    if (isset($_POST['getSave66'])) {
+        $hp_namaanak   = $dis->validateHtml($_POST['nama66']);
+        $hp_umur   = $dis->validateHtml($_POST['umur66']);
+       
+        $kdid = $auth[0]['kd_id'];
+        $username = $auth[0]['nama_user'];
+        $currentDate = date("Y-m-d");
+
+        $perk_1 = $dis->validateHtml($_POST['soal661']);
+        $perk_2 = $dis->validateHtml($_POST['soal662']);
+        $perk_3 = $dis->validateHtml($_POST['soal663']);
+        $perk_4 = $dis->validateHtml($_POST['soal664']);
+        $perk_5 = $dis->validateHtml($_POST['soal665']);
+        $perk_6 = $dis->validateHtml($_POST['soal666']);
+        $perk_7 = $dis->validateHtml($_POST['soal667']);
+        $perk_8 = $dis->validateHtml($_POST['soal668']);
+        $perk_9 = $dis->validateHtml($_POST['soal669']);
+        $perk_10 = $dis->validateHtml($_POST['soal6610']);
+        
+        // if (empty($hp_namaanak) || empty($perk_2) || empty($perk_3) || empty($perk_4) || empty($perk_5) || empty($perk_6) || empty($perk_7) || empty($perk_8) || empty($perk_9) || empty($perk_10) ) {
+        if (empty($hp_namaanak) || empty($hp_umur) ) {
+            $response = ['response'=>'negative','alert'=>'Lengkapi field'];
+        }else{
+        $perk_total = $perk_1+$perk_2+$perk_3+$perk_4+$perk_5+$perk_6+$perk_7+$perk_8+$perk_9+$perk_10;
+                    $value = "'','$kdid','$username','$hp_namaanak','$currentDate',$hp_umur,'$perk_1','$perk_2','$perk_3','$perk_4','$perk_5','$perk_6','$perk_7','$perk_8','$perk_9','$perk_10','$perk_total'";
+                    $response = $dis->insert('table_perkembangan',$value,"?page=viewPerkembangan");
+        }
+    }
+
+    if (isset($_POST['getSave72'])) {
+        $hp_namaanak   = $dis->validateHtml($_POST['nama72']);
+        $hp_umur   = $dis->validateHtml($_POST['umur72']);
+       
+        $kdid = $auth[0]['kd_id'];
+        $username = $auth[0]['nama_user'];
+        $currentDate = date("Y-m-d");
+
+        $perk_1 = $dis->validateHtml($_POST['soal721']);
+        $perk_2 = $dis->validateHtml($_POST['soal722']);
+        $perk_3 = $dis->validateHtml($_POST['soal723']);
+        $perk_4 = $dis->validateHtml($_POST['soal724']);
+        $perk_5 = $dis->validateHtml($_POST['soal725']);
+        $perk_6 = $dis->validateHtml($_POST['soal726']);
+        $perk_7 = $dis->validateHtml($_POST['soal727']);
+        $perk_8 = $dis->validateHtml($_POST['soal728']);
+        $perk_9 = $dis->validateHtml($_POST['soal729']);
+        $perk_10 = $dis->validateHtml($_POST['soal7210']);
+        
+        // if (empty($hp_namaanak) || empty($perk_2) || empty($perk_3) || empty($perk_4) || empty($perk_5) || empty($perk_6) || empty($perk_7) || empty($perk_8) || empty($perk_9) || empty($perk_10) ) {
+        if (empty($hp_namaanak) || empty($hp_umur) ) {
+            $response = ['response'=>'negative','alert'=>'Lengkapi field'];
+        }else{
+        $perk_total = $perk_1+$perk_2+$perk_3+$perk_4+$perk_5+$perk_6+$perk_7+$perk_8+$perk_9+$perk_10;
+                    $value = "'','$kdid','$username','$hp_namaanak','$currentDate',$hp_umur,'$perk_1','$perk_2','$perk_3','$perk_4','$perk_5','$perk_6','$perk_7','$perk_8','$perk_9','$perk_10','$perk_total'";
+                    $response = $dis->insert('table_perkembangan',$value,"?page=viewPerkembangan");
+        }
+    }
+
   
  ?>
 <section class="au-breadcrumb m-t-75">
@@ -1648,7 +1764,9 @@
                                         1.
                                     </div>
                                     <div class="col-md-8">
-                                    <label for="">Letakkan kismis diatas meja dekat anak, apakah anak dapat mengambil dengan ibu jari dan telunjuk?</label>
+                                    <label for="">Letakkan kismis diatas meja dekat anak, apakah anak dapat mengambil dengan ibu jari dan telunjuk?
+                                    <img src="images/perkembangan/21_1.png"  style="height: 100px;"><br>
+                                    </label>
                                     </div>
                                     <div class="col-md-3">
                                     <select style="width: 120px; text-align: center;" id="soal211" name="soal211">
@@ -2040,7 +2158,9 @@
                                         3.
                                     </div>
                                     <div class="col-md-8">
-                                    <label for="">Apakah anak dapat menyebut 2 diantara gambar-gambar ini tanpa bantuan?</label>
+                                    <label for="">Apakah anak dapat menyebut 2 diantara gambar-gambar ini tanpa bantuan?
+                                    <img src="images/perkembangan/30_3.png"  style="height: 100px;"><br>
+                                    </label>
                                     </div>
                                     <div class="col-md-3">
                                     <select style="width: 120px; text-align: center;" id="soal303" name="soal303">
@@ -2203,7 +2323,9 @@
                                         2.
                                     </div>
                                     <div class="col-md-8">
-                                    <label for="">Apakah anak dapat menyebut 2 diantara gambar-gambar ini tanpa bantuan?</label>
+                                    <label for="">Apakah anak dapat menyebut 2 diantara gambar-gambar ini tanpa bantuan?
+                                    <img src="images/perkembangan/36_2.png"  style="height: 100px;"><br>
+                                    </label>
                                     </div>
                                     <div class="col-md-3">
                                     <select style="width: 120px; text-align: center;" id="soal362" name="soal362">
@@ -2235,7 +2357,7 @@
                                         4.
                                     </div>
                                     <div class="col-md-8">
-                                    <label for="">Buat garis lurus ke bawah sepanjang sekurang- kurangnya 2.5 cm. Suruh anak menggambar garis lain di samping garis ini. Jawab YA bila ia menggambar garis seperti ini: -- Jawab TIDAK bila ia menggambar garis seperti ini: --</label>
+                                    <label for="">Buat garis lurus ke bawah sepanjang sekurang- kurangnya 2.5 cm. Suruh anak menggambar garis lain di samping garis ini. Jawab YA bila ia menggambar garis seperti ini: <img src="images/perkembangan/36_4.png"  style="height: 100px;"><br> Jawab TIDAK bila ia menggambar garis seperti ini: <img src="images/perkembangan/36_4_1.png"  style="height: 100px;"><br></label>
                                     </div>
                                     <div class="col-md-3">
                                     <select style="width: 120px; text-align: center;" id="soal364" name="soal364">
@@ -2383,7 +2505,9 @@
                                         2.
                                     </div>
                                     <div class="col-md-8">
-                                    <label for="">Beri pensil dan kertas. Buatlah lingkaran di atas kertas tersebut.Minta anak menirunya. Dapatkah anak menggambar lingkaran?</label>
+                                    <label for="">Beri pensil dan kertas. Buatlah lingkaran di atas kertas tersebut.Minta anak menirunya. Dapatkah anak menggambar lingkaran?
+                                    <img src="images/perkembangan/42_2.png"  style="height: 100px;"><br>
+                                    </label>
                                     </div>
                                     <div class="col-md-3">
                                     <select style="width: 120px; text-align: center;" id="soal422" name="soal422">
@@ -2596,7 +2720,9 @@
                                         5.
                                     </div>
                                     <div class="col-md-8">
-                                    <label for="">Jangan membantu anak dan jangan menyebut lingkaran. Suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Apakah anak dapat menggambar lingkaran?</label>
+                                    <label for="">Jangan membantu anak dan jangan menyebut lingkaran. Suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Apakah anak dapat menggambar lingkaran?
+                                    <img src="images/perkembangan/48_5.png"  style="height: 100px;"><br>
+                                    </label>
                                     </div>
                                     <div class="col-md-3">
                                     <select style="width: 120px; text-align: center;" id="soal485" name="soal485">
@@ -2644,7 +2770,8 @@
                                         8.
                                     </div>
                                     <div class="col-md-8">
-                                    <label for="">Dapatkah anak mengenakan celana panjang, kemeja, baju atau kaos kaki tanpa di bantu? (Tidak termasuk memasang kancing, gesper atau ikat pinggang) </label>
+                                    <label for="">Dapatkah anak mengenakan celana panjang, kemeja, baju atau kaos kaki tanpa di bantu? (Tidak termasuk memasang kancing, gesper atau ikat pinggang)
+                                    </label>
                                     </div>
                                     <div class="col-md-3">
                                     <select style="width: 120px; text-align: center;" id="soal488" name="soal488">
@@ -2660,7 +2787,8 @@
                                      9.   
                                     </div>
                                     <div class="col-md-8">
-                                    <label for="">Dapatkah anak menyebutkan nama lengkapnya tanpa dibantu? Jawab TIDAK jika ia hanya menyebut sebagian namanya atau ucapannya sulit dimengerti. </label>
+                                    <label for="">Dapatkah anak menyebutkan nama lengkapnya tanpa dibantu? Jawab TIDAK jika ia hanya menyebut sebagian namanya atau ucapannya sulit dimengerti. 
+                                    </label>
                                     </div>
                                     <div class="col-md-3">
                                     <select style="width: 120px; text-align: center;" id="soal489" name="soal489">
@@ -2681,6 +2809,782 @@
                                 <?php endif ?>
                             </form>
                             </div>
+
+                            <div id="ksp54bulan" style="display: none;">
+                            <form method="post">
+                                <label><b>USIA 54 BULAN</b></label><br>
+                                <input type="hidden" name="nama54" id="nama54">
+                                <input type="hidden" name="umur54" id="umur54">
+                                <!-- <label><b>Anak dipangku ibunya/pengasuh di tepi meja periksa</b></label> -->
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        1.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Dapatkah anak meletakkan 8 buah kubus satu persatu di atas yang lain tanpa menjatuhkan kubus tertentu? Kubus yang digunakan ukuran 2.5 - 5 cm </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal541" name="soal541">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        2.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Apakah anak dapat bermain petak umpet, ular naga atau permainan lain dimana ia ikut bermain dan mengikuti aturan bermain?</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal542" name="soal542">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- <label><b>Tanya Ibu/ Pengasuh</b></label> -->
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        3.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Dapatkah anak mengenakan celana panjang, kemeja, baju atau kaos kaki tanpa di bantu? (Tidak termasuk memasang kancing, gesper atau ikat pinggang)</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal543" name="soal543">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        4.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Dapatkah anak menyebutkan nama lengkapnya tanpa dibantu? Jawab TIDAK jika ia hanya menyebut sebagaian namanya atau ucapannya sulit dimengerti</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal544" name="soal544">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        5.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Isi titik-titik di bawah ini dengan jawaban anak. Jangan membantu kecuali mengulangi pertanyaan.<br>"Apa yang kamu lakukan jika kamu kedinginan?".....<br>"Apa yang kamu lakukan jika kamu lapar?".....<br>"Apa yang kamu lakukan jika kamu lelah?".....<br>Jawab YA bila anak menjawab ke 3 pertanyaan tadi dengan benar, bukan dengan gerakan atau isyarat. Jika kedinginan, jawaban yang benar adalah "menggigil",pakai mantel" atau "masuk kedalam rumah".<br>Jika lapar, jawaban yang benar adalah "makan"<br>Jika lelah, jawaban yang benar adalah "mengantuk","tidur","berbaring/tidur-tiduran","istirahat" atau "diam sejenak"</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal545" name="soal545">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        6.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Apakah anak dapat mengancingkan bajunya atau pakaian boneka?</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal546" name="soal546">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        7.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya dan beri anak Anda kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 6 detik atau lebih?</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal547" name="soal547">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        8.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Jangan mengoreksi/membantu anak. Jangan menyebut kata "lebih panjang". Perlihatkan gambar kedua garis ini pada anak. Tanyakan:"Mana garis yang leboh panjang?"<br>Minta anak menunjuk garis yang lebih panjang. Setelah anak menunjuk, putar lembar ini dan ulangi pertanyaan tersebut. Setelah anak menunjuk, putar lembar ini lagi dan ulangi pertanyaan tadi. Apakah anak dapat menunjuk garis yang lebih panjang sebanyak 3 kali dengan benar?
+                                    <img src="images/perkembangan/54_8.png"  style="height: 100px;"><br>
+                                </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal548" name="soal548">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                     9.   
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Berikan 3 kali kesempatan. Apakah anak dapat menggambar seperti contoh ini? 
+                                    <img src="images/perkembangan/54_9.png"  style="height: 100px;"><br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal549" name="soal549">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                     10.   
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mata pada saat memberikan perintah berikut ini:<br>
+                                    "Letakkan kertas ini di atas lantai".<br>"Letakkan kertas ini di bawah kursi".<br>"Letakkan kertas ini di depan kamu".<br>"Letakkan kertas ini di belakang kamu".<br>Jawab YA hanya jika anak mmengerti arti "di atas","di bawah","di depan" dan "di belakang".</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal5410" name="soal5410">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <?php if (isset($_GET['edit'])): ?>
+                                <button type="submit" name="getUpdate" class="btn btn-warning"><i class="fa fa-check"></i> Update</button>
+                                <a href="?page=viewDistributor" class="btn btn-danger">Cancel</a>
+                                <?php endif ?>
+                                <?php if (!isset($_GET['median'])): ?>    
+                                <button type="submit" name="getSave54" class="btn btn-primary"><i class="fa fa-download"></i> Simpan</button>
+                                <?php endif ?>
+                            </form>
+                            </div>
+                            <!-- ----  -->
+
+                            <div id="ksp60bulan" style="display: none;">
+                            <form method="post">
+                                <label><b>USIA 60 BULAN</b></label><br>
+                                <input type="hidden" name="nama60" id="nama60">
+                                <input type="hidden" name="umur60" id="umur60">
+                                <!-- <label><b>Anak dipangku ibunya/pengasuh di tepi meja periksa</b></label> -->
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        1.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Isi titik-titik dibawah ini dengan jawaban anak. Jangan membantu kecuali mengulangi pertanyaan.<br>"Apa yang kamu lakukan jika kamu kedinginan?"....<br>"Apa yang kamu lakukan jika kamu lapar?"....<br>"Apa yang kamu lakukan jika kamu lelah?"....<br>Jawab YA bila anak menjawab ke 3 pertanyaan tadi dengan benar, bukan dengan gerakan atau isyarat. Jika kedinginan, jawaban yang benar adalah "menggigil","pakai mantel" atau "masuk kedalam rumah". Jika lapar, jawaban yang beanr adalah "makan". Jika lelah, jawaban yang benar adalah "mengantuk","tidur","berbaring/tidur-tiduran","istirahat" atau "diam sejenak" </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal601" name="soal601">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        2.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Apakah anak dapat mengancingkan bajunya atau pakaian boneka?</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal602" name="soal602">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- <label><b>Tanya Ibu/ Pengasuh</b></label> -->
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        3.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya dan beri anak anda kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 6 detik atau lebih?</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal603" name="soal603">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        4.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Jangan mengoreksi/membantu anak. Jangan menyebut kata "lebih panjang". Perlihatkan gambar kedua garis ini pada anak. Tanyakan: "Mana garis yang lebih panjang?" Minta anak menunjuk garis yang lebih panjang. Setelah anak menunjuk, putar lembar ini dan ulangi pertanyaan tersebut. Stelah anak menunjuk, putar lembar ini lagi dan ulangi pertanyaan tadi. Apakah anak dapat menunjuk garis yanglebih panjang sebanyak 3 kali dengan benar?</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal604" name="soal604">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        5.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Berikan 3 kali kesempatan. Apakah anak dapat menggambar seperti contoh ini?
+                                    <img src="images/perkembangan/60_5.png"  style="height: 100px;"><br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal605" name="soal605">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        6.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mata pada saat ini memberikan perintah berikut ini:<br>"Letakkan kertas ini di atas lantai",<br>"Letakkan kertas ini di bawah kursi",<br>"Letakkan kertas ini di depan kamu"<br>"Letakkan kertas ini di belakang kamu",<br>Jawab YA hanya jika anak mengerti arti "di atas","di bawah","di depan" dan "di belakang".</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal606" name="soal606">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        7.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Apakah anak bereaksi dengan tenang dan tidak rewel (tanpa menangis atau menggelayut pada Anda) pada saat Anda meninggalkannya?</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal607" name="soal607">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        8.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">
+                                    <img src="images/perkembangan/60_8.png"  style="height: 100px;"><br>
+                                    Jangan menunjuk, membantu atau membetulkan, katakan pada anak:<br>"Tunjukkan segi empat merah"<br>"Tunjukkan segi empat kuning"<br>"Tunjukkan segi empat biru"<br>"Tunjukkan segi empat hijau"<br> Dapatkah anak menunjuk keempat warna itu dengan benar?</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal608" name="soal608">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                     9.   
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Suruh anak melompat dengan satu kaki beberapa kali tanpa berpegangan (lompatan dengan dua kaki tidak ikut dinilai). Apakah ia dapat melompat 2-3 kali dengan satu kaki? </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal609" name="soal609">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                     10.   
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Dapatkah anak sepenuhnya berpakaian sendiri tanpa bantuan?</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal6010" name="soal6010">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <?php if (isset($_GET['edit'])): ?>
+                                <button type="submit" name="getUpdate" class="btn btn-warning"><i class="fa fa-check"></i> Update</button>
+                                <a href="?page=viewDistributor" class="btn btn-danger">Cancel</a>
+                                <?php endif ?>
+                                <?php if (!isset($_GET['median'])): ?>    
+                                <button type="submit" name="getSave60" class="btn btn-primary"><i class="fa fa-download"></i> Simpan</button>
+                                <?php endif ?>
+                            </form>
+                            </div>
+                            <!-- ----  -->
+
+                            <div id="ksp66bulan" style="display: none;">
+                            <form method="post">
+                                <label><b>USIA 66 BULAN</b></label><br>
+                                <input type="hidden" name="nama66" id="nama66">
+                                <input type="hidden" name="umur66" id="umur66">
+                                <!-- <label><b>Anak dipangku ibunya/pengasuh di tepi meja periksa</b></label> -->
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        1.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar bseperti contoh ini di kertas kosong yang tersedia. Berikan 3 kali kesempatan. <br>Apakah anak dapat menggambar seperti contoh ini?
+                                    <img src="images/perkembangan/66_1.png"  style="height: 100px;"><br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal661" name="soal661">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        2.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mata pada saat memberikan perintah berikut ini:<br>
+                                        “Letakan kertas ini di atas lantai”.<br>
+                                        “Letakan kertas ini di bawah kursi”.<br>
+                                        “Letakan kertas ini di depan kamu”.<br>
+                                        “Letakan kertas ini di belakang kamu”.<br>
+                                    Jawab YA hanya jika anak mengerti arti “di atas”, “di bawah”, “di depan”, “di belakang”.<br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal662" name="soal662">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- <label><b>Tanya Ibu/ Pengasuh</b></label> -->
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        3.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Apakah anak bereaksi dengan tenang dan tidak rewel (tanpa menangis atau menggelayut pada anda) pada saat anda meninggalkannya?<br></label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal663" name="soal663">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        4.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Jangan menunjuk, membantu atau membetulkan, katakana pada anak:<br>
+                                        “Tunjukkan segi empat merah”<br>
+                                        “Tunjukkan segi empat kuning”<br>  
+                                        “Tunjukkan segi empat biru”<br>
+                                        “Tunjukkan segi empat hijau”<br>
+                                    Dapatkah anak menunjuk keempat warna itu dengan benar?
+                                    <img src="images/perkembangan/66_4.png"  style="height: 100px;"><br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal664" name="soal664">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        5.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Suruh anak melompat dengan satu kaki beberapa kali tanpa berpegangan (lompatan degan dua kaki tidak ikut dinilai). <br> Apakah ia dapat melompat 2-3 kali dnegan satu kaki?<br></label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal665" name="soal665">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        6.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Dapatkah anak sepenuhnya berpakaian sendiri tanpa bantuan?<br></label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal666" name="soal666">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        7.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">7.	Suruh anak menggambar di tempat kosong yang tersedia. <br> Katakan padanya : “Buatlah gambar orang”.<br>
+                                    Jangan memberi perintah lebih dari itu. <br> Jangan bertanya/mengingatkan anak bula ada bagian yang belum tergam-bar. <br> Dalam memberi nilai, hitunglah berapa bagian tubuh yang tergambar.<br> Untuk bagian tubuh yang berpasangan seperti mata, telinga, lengan dan kaki, setiap pasang dinilai satu bagian.<br> Dapatkah anak menggambar sedikitnya 3 bagian tubuh?<br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal667" name="soal667">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        8.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">8.	Pada gambar orang yang dibuat pada nomor 7, dapatkah anak menggambar sedikitnya 6 bagian tubuh? <br></label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal668" name="soal668">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                     9.   
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">9.	Tulis apa yang dikatakan anak pada kalimat-kalimat yang belum selesai ini, jangan membantu kecuali mengulang pertanyaan:<br>
+                                    “Jika kuda besar maka tikus…………………………………..”<br>
+                                    “Jika api panas maka es…………………………………………”<br>
+                                    “Jika ibu seorang wanita maka ayah seorang………..”<br>
+                                    Apakah anak menjawab dengan benar (tikus kecil, es dingin, ayah seorang pria)?<br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal669" name="soal669">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                     10.   
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Apakah anak dapat menangkap bola kecil sebesar bola tenis/bola kasti hanya dengan menggunakan kedua tangannya?<br>
+                                    (Bola besar tidak ikut dinilai).<br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal6610" name="soal6610">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <?php if (isset($_GET['edit'])): ?>
+                                <button type="submit" name="getUpdate" class="btn btn-warning"><i class="fa fa-check"></i> Update</button>
+                                <a href="?page=viewDistributor" class="btn btn-danger">Cancel</a>
+                                <?php endif ?>
+                                <?php if (!isset($_GET['median'])): ?>    
+                                <button type="submit" name="getSave66" class="btn btn-primary"><i class="fa fa-download"></i> Simpan</button>
+                                <?php endif ?>
+                            </form>
+                            </div>
+                            <!-- ----  -->
+
+                            <div id="ksp72bulan" style="display: none;">
+                            <form method="post">
+                                <label><b>USIA 72 BULAN</b></label><br>
+                                <input type="hidden" name="nama72" id="nama72">
+                                <input type="hidden" name="umur72" id="umur72">
+                                <!-- <label><b>Anak dipangku ibunya/pengasuh di tepi meja periksa</b></label> -->
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        1.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Jangan menunjuk, membantu atau membetulkan, katakana pada anak:<br>
+                                    “Tunjukkan segi empat merah”<br>
+                                    “Tunjukkan segi empat kuning”<br>
+                                    “Tunjukkan segi empat biru”<br>
+                                    “Tunjukkan segi empat hijau”<br>
+                                    Dapatkah anak menunjukan keempat warna itu dengan benar?<img src="images/perkembangan/72_1.png"  style="height: 100px;"><br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal721" name="soal721">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        2.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Suruh anak melompat dengan satu kaki beberapa kali tanpa berpegangan (lompatan dengan dua kaki tidak ikut dinilai).<br> 
+                                    Apakah ia dapat melompati 2-3 kali dengan satu kaki?<br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal722" name="soal722">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- <label><b>Tanya Ibu/ Pengasuh</b></label> -->
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        3.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Dapatkah anak sepenuhnya berpakaian sendiri tanpa bantuab?<br></label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal723" name="soal723">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        4.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Suruh anak menggambar di tempat kosong yang tersedia.<br> Katakan padanya: “Buatlah gambar orang”<br>
+                                    Jangan memberi perintah lebih dari itu.<br> Jangan bertanya/mengingatkan anak bila ada bagian yang belum tergamb-bar.<br> Dalam meberi nilai, hitunglah berapa bagian tubuh yang tergambar.<br> Untuk bagian tubuh yang berpasangan seperti mata, telinga, lengan dan kaki, setiap pasang dinilai satu bagian.<br> Dapatkah anak menggambar sedikitnya 3 bagiab tubuh?<br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal724" name="soal724">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        5.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Pada gambar orang yang dibuat nomor 4, dapatkah anak menggambar sedikitnya 6 bagian tubuh?<br></label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal725" name="soal725">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        6.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">6.	Tulis apa yang dikatakan anak pada kalimat-kalimat yang belum selesai ini, jangan membantu kecuali mengulang pertanyaan:<br>
+                                    “Jika kuda besar maka tikus…………………………………..”<br>
+                                    “Jika api panas maka es…………………………………………”<br>
+                                    “Jika ibu seorang wanita maka ayah seorang………..”<br>
+                                    Apakah anak menjawab dengan benar (tikus kecil, es dingin, ayah seorang pria)?<br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal726" name="soal726">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        7.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Apakah anak dapat menangkap bola kecil sebesar bola tenis/bola kasti hanya dengan menggunakan kedua tangannya?<br>
+                                    (Bola besar tidak ikut dinilai).<br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal727" name="soal727">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        8.
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Suruh anak berdiri satu kaki tanpa berpegangan.<br> Jika perlu tunjukkan caranya dan beri anak anda kesempatan melakukannya 3 kali.<br> Dapatkah ia mempertahankan keseimbangan dalam waktu 11 detik atau lebih?<br></label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal728" name="soal728">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                     9.   
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia.<br> Berikan 3 kali kesempatan.<br>
+                                    Apakah anak dapat menggambar seperti contoh ini?<img src="images/perkembangan/72_9.png"  style="height: 100px;"><br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal729" name="soal729">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                     10.   
+                                    </div>
+                                    <div class="col-md-8">
+                                    <label for="">10.	Isi titik-titik di bawah ini dnegan jawaban anak.<br> Jangan membantu kecuali mengulangi pertanyaan samoai 3 kali bila anak menanyakannya.<br>
+                                    “Sendok dibuar dari apa?”…………<br>
+                                    “Sepatu dibuat dari apa?”………………<br>
+                                    “Pintu dibuat dari apa?”…………….<br>
+                                    Apakah anak dapat menjawab ke 3 pertanyaan di atas dengan benar? <br>
+                                    Sendok dibuat dari besi, baja, plastic, kayu.<br>
+                                    Sepatu dibuat dari kulit, karet, kain, plastic, kayu.<br>
+                                    Pintu dibuat dari kayu, besi, kaca.<br>
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <select style="width: 120px; text-align: center;" id="soal7210" name="soal7210">
+                                        <option>Pilih</option>
+                                        <option value="1">YA</option>
+                                        <option value="0">TIDAK</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <?php if (isset($_GET['edit'])): ?>
+                                <button type="submit" name="getUpdate" class="btn btn-warning"><i class="fa fa-check"></i> Update</button>
+                                <a href="?page=viewDistributor" class="btn btn-danger">Cancel</a>
+                                <?php endif ?>
+                                <?php if (!isset($_GET['median'])): ?>    
+                                <button type="submit" name="getSave72" class="btn btn-primary"><i class="fa fa-download"></i> Simpan</button>
+                                <?php endif ?>
+                            </form>
+                            </div>
+                            <!-- ----  -->
 
                         </div>
                     </div>
@@ -2765,10 +3669,29 @@
         document.getElementById('ksp36bulan').style.display='none';
         document.getElementById('ksp42bulan').style.display='none';
         document.getElementById('ksp48bulan').style.display='none';
+        document.getElementById('ksp54bulan').style.display='none';
+        document.getElementById('ksp60bulan').style.display='none';
+        document.getElementById('ksp66bulan').style.display='none';
+        document.getElementById('ksp72bulan').style.display='none';
 
         
-
-        if(age>=48){
+        if(age>=72){
+            document.getElementById('ksp72bulan').style.display='block';
+            document.getElementById('nama72').value=document.getElementById('nama').value;
+            document.getElementById('umur72').value=72;    
+        }else if(age>=66){  
+            document.getElementById('ksp66bulan').style.display='block';
+            document.getElementById('nama66').value=document.getElementById('nama').value;
+            document.getElementById('umur66').value=66;
+        }else if(age>=60){
+            document.getElementById('ksp60bulan').style.display='block';
+            document.getElementById('nama60').value=document.getElementById('nama').value;
+            document.getElementById('umur60').value=60;
+        }else if(age>=54){
+            document.getElementById('ksp54bulan').style.display='block';
+            document.getElementById('nama54').value=document.getElementById('nama').value;
+            document.getElementById('umur54').value=54;
+        }else if(age>=48){
             document.getElementById('ksp48bulan').style.display='block';
             document.getElementById('nama48').value=document.getElementById('nama').value;
             document.getElementById('umur48').value=48;
@@ -2812,7 +3735,13 @@
             document.getElementById('ksp6bulan').style.display='block';
             document.getElementById('nama6').value=document.getElementById('nama').value;
             document.getElementById('umur6').value=6;
-        }else if(age>=3){
+        }
+        // else if(age>=3){
+        //     document.getElementById('ksp3bulan').style.display='block';
+        //     document.getElementById('nama3').value=document.getElementById('nama').value;
+        //     document.getElementById('umur3').value=3;
+        // }
+        else{
             document.getElementById('ksp3bulan').style.display='block';
             document.getElementById('nama3').value=document.getElementById('nama').value;
             document.getElementById('umur3').value=3;
